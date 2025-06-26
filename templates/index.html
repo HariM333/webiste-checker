@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Status Checker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h2 class="text-center mb-4">🔍 Website Status Checker</h2>
+    <form method="POST" action="/upload" enctype="multipart/form-data" class="card p-4 shadow-sm">
+        <div class="mb-3">
+            <label for="file" class="form-label">Upload CSV or Excel File</label>
+            <input class="form-control" type="file" name="file">
+            <div class="form-text">File must contain a column named <code>domain</code>.</div>
+            <button class="btn btn-primary w-100" type="submit">Check Status</button>
+        </div> 
+    </form>
+
+            <br><hr><h3 class="text-center">OR</h3><hr><br>
+            
+    <form method="POST" action="/check-url" enctype="multipart/form-data" class="card p-4 shadow-sm">
+            <div class="mb-3">
+            <label for="url" class="form-label">Enter a Website URL</label>
+            <input class="form-control" type="url" name="url" placeholder="https://example.com">
+            <button class="btn btn-primary w-100" type="submit">Check Status</button>
+        </div>
+        
+    </form>
+</div>
+</body>
+</html>
+
